@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+
+option go_package = "github.com/SurendharHK/ecommerce-proto";
+package order_proto;
+
+
+message GetOrderRequest{
+    string CustomerId=1;
+}
+
+message GetOrderResponse{
+      
+}

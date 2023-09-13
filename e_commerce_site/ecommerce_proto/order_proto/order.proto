@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package order_proto;
+
+option go_package="github.com/SurendharHK/ecommerce-proto";
+
+import "ecommerce_proto/order_proto/remove_order.proto";
+import "ecommerce_proto/order_proto/create_order.proto";
+import "ecommerce_proto/order_proto/get_order.proto";
+import "ecommerce_proto/order_proto/update_order.proto";
+
+service OrderService{
+    
+    rpc RemoveOrderCustomer(RemoveOrderRequest)returns(RemoveOrderResponse);
+    rpc CreateOrder(CustomerOrder)returns(CustomerResponse);
+    rpc GetOrderDetails(GetOrderRequest) returns (CustomerOrder);
+    rpc UpdateOrderDetails(UpdateOrderRequest)  returns (UpdateOrderResponse);
+    rpc AddOrderDetails(UpdateOrderRequest) returns  (UpdateOrderResponse);
+}
